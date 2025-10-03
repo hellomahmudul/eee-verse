@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== BOX ICONS ===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ===== CSS ===== -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/result-style.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+
+    <title>EEE-VERSE || HOME</title>
+</head>
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+
+        <div class="page">
+            <h1 class="page-title">eee-verse</h1>
+        </div>
+        <div class="header__img">
+            <img src="assets/img/perfil.jpg" alt="">
+        </div>
+
+    </header>
+
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div>
+                <a href="#" class="nav__logo">
+                    <i class='bx bx-layer nav__logo-icon'></i>
+                    <span class="nav__logo-name">EEE-VERSE</span>
+                </a>
+
+                <div class="nav__list">
+                    <a href="index.html" class="nav__link active">
+                        <i class='bx bx-grid-alt nav__icon'></i>
+                        <span class="nav__name">Dashborad</span>
+                    </a>
+
+                    <a href="result.html" class="nav__link">
+                        <i class='bx bx-calculator nav__icon'></i>
+                        <span class="nav__name">CGPA CALC</span>
+                    </a>
+
+                    <a href="resource.html" class="nav__link">
+                        <i class='bx bx-folder nav__icon'></i>
+                        <span class="nav__name">Resources</span>
+                    </a>
+
+                    <a href="about.html" class="nav__link">
+                        <i class='bx bx-info-circle nav__icon'></i>
+                        <span class="nav__name">About Us</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="nav__link">
+                <i class='bx bx-log-out nav__icon'></i>
+                <span class="nav__name">Log Out</span>
+            </a>
+        </nav>
+    </div>
+
+
+    <marquee behavior="scroll" direction="left" class="marquee">
+        <p>📢 New Feature: Export your CGPA results to PDF; Check out the CGPA CALC section now!</p>
+        <p style="color: red;">📢 Warning: Only the result section is fully functional; else are under contstraction.
+        </p>
+    </marquee>
+
+    <!-- ===== Welcome banner ===== -->
+    <div class="welcome">
+        <h1 class="welcome-title">Welcome!</h1>
+        <p class="welcome-sub">Dept. of Entertainment and Emotion Engineering</p>
+    </div>
+
+    <!-- ===== Main card area (slider + two small fixed cards) ===== -->
+    <div class="card-container">
+
+        <!-- Big Sliding Div -->
+        <div class="slider" id="main-slider" aria-label="Feature carousel">
+            <div class="slides">
+
+                <div class="slide">
+                    <img src="assets/img/feature1.jpg" alt="MacBook Pro">
+                    <div class="caption">
+                        <i class='bx bx-calculator'></i> Semester-wise GPA Calculator
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/img/feature2.jpg" alt="Feature two">
+                    <div class="caption">
+                        <i class='bx bx-analyse'></i> Automatic CGPA Calculation
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="assets/img/feature3.jpg" alt="Feature three">
+                    <div class="caption">
+                        <i class='bx bx-export'></i> Export Results to PDF/Excel
+
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prev / Next -->
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <button class="next" aria-label="Next slide">&#10095;</button>
+
+            <!-- Dots -->
+            <div class="dots" role="tablist" aria-label="Slide indicators"></div>
+        </div>
+
+        <!-- Two small fixed cards on the right (stacked on desktop) -->
+        <div class="small-cards">
+            <div class="small-card">
+
+                <i class='bx bx-book-open' style="font-size:5rem; color:#3cbcdf;"></i>
+                <h3>Resources Hub</h3>
+                <p>Access eBooks, notes, and past year questions for EEE courses.</p>
+            </div>
+
+            <div class="small-card">
+                <i class='bx bx-group' style="font-size:5rem; color:#3cbcdf;"></i>
+                <h3>About EEE-VERSE</h3>
+                <p>A student-driven platform for JKKNIU EEE department – built to support your academic journey.</p>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/slider.js"></script>
+</body>
+
+</html>

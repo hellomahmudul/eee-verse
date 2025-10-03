@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/result-style.css">
+
+        <title>EEE-VERSE || CGPA</title>
+    </head>
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+
+            <div class="header__img">
+                <img src="assets/img/perfil.jpg" alt="">
+            </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">EEE-VERSE</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="index.html" class="nav__link">
+                        <i class='bx bx-grid-alt nav__icon' ></i>
+                            <span class="nav__name">Dashboard</span>
+                        </a>
+                        
+                        <a href="result.html" class="nav__link active">
+                            <i class='bx bx-calculator nav__icon' ></i>
+                            <span class="nav__name">CGPA CALC</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-folder nav__icon' ></i>
+                            <span class="nav__name">Resources</span>
+                        </a>
+
+                        <a href="#" class="nav__link">
+                            <i class='bx bx-info-circle nav__icon' ></i>
+                            <span class="nav__name">About Us</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Log Out</span>
+                </a>
+            </nav>
+        </div>
+
+
+
+<form id="gpaForm">
+      <h2>C G P A</h2>
+
+      <hr />
+      <br />
+      <!-- Replace the placeholders with your actual course names -->
+
+      <label for="course1">1st Semester</label>
+      <input type="text" value="19.50" id="cc1" placeholder="Total Credit" readonly />
+      <input type="number" pattern="[0-9]*" id="gp1" placeholder="GPA" required />
+
+      <label for="course2">2nd Semester</label>
+      <input type="text" value="21.00" id="cc2" placeholder="Total Credit" readonly />
+      <input type="number" pattern="[0-9]*" id="gp2" placeholder="GPA" required />
+
+      <label for="course3">3rd Semester</label>
+      <input type="text" value="21.00" id="cc3" placeholder="Total Credit" readonly/>
+      <input type="number" pattern="[0-9]*" id="gp3" placeholder="GPA" required/>
+
+      <label for="course4">4th Semester</label>
+      <input type="text" value="22.50" id="cc4" placeholder="Total Credit" readonly/>
+      <input type="number" pattern="[0-9]*" id="gp4" placeholder="GPA" required/>
+
+      <label for="course5">5th Semester</label>
+      <input type="text" value="21.00" id="cc5" placeholder="Total Credit" readonly/>
+      <input type="number" pattern="[0-9]*" id="gp5" placeholder="GPA" required/>
+
+      <label for="course6">6th Semester</label>
+      <input type="text" value="21.00" id="cc6" placeholder="Total Credit" readonly/>
+      <input type="number" pattern="[0-9]*" id="gp6" placeholder="GPA" required/>
+
+      <label for="course7">7th Semester</label>
+      <input type="text" value="19.50" id="cc7" placeholder="Total Credit" readonly/>
+      <input type="number" pattern="[0-9]*" id="gp7" placeholder="GPA" required/>
+
+      <label for="course8">8th Semester</label>
+      <input type="text" value="18.00" id="cc8" placeholder="Total Credit" readonly/>
+      <input type="number" pattern="[0-9]*" id="gp8" placeholder="GPA" required/>
+
+      <!-- Repeat the above pattern for other courses -->
+
+      <button type="button" onclick="calculateGPAAndScroll('Your CGPA is: ')">Calculate CGPA</button>
+    </form>
+    <br />
+    <div class="result" id="resultContainer" style="display: none">
+      <!-- Display results here using JavaScript -->
+    </div>
+<div class="result" id="actionButtons" style="display:none; margin-top:10px;">
+    <button type="button" id="clearBtn">Clear</button>
+    <button type="button" id="exportBtn">Export</button>
+</div>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/cgpa_export.js"></script>
+    </body>
+</html>
