@@ -1,0 +1,272 @@
+/* ====== WELCOME SECTION ====== */
+
+.welcome,
+.page {
+    max-width: 100%;
+    margin: 20px auto 10px;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-family: "Leckerli One", cursive;
+    font-weight: 300;
+
+    font-style: italic;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: black;
+    animation: gradientShift 3.5s linear infinite;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+/* Slider caption with icon */
+.caption i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* Small card icons */
+.small-card i {
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+.welcome-title {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-family: "Leckerli One", cursive;
+    background: linear-gradient(45deg,
+            #f7f6fb53,
+            #319ab7,
+            #1f475d,
+            #319ab7,
+            #f7f6fbce);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 3.5s linear infinite;
+    font-weight: 700;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.welcome-sub {
+    margin: 6px 0 0;
+    color: #5d6b7a;
+    font-size: 1rem;
+    opacity: .9;
+}
+
+/* ====== CARD CONTAINER LAYOUT ====== */
+.card-container {
+    width: 90%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* <-- THIS controls width ratio: big:small = 3:1 */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 18px auto;
+    align-items: stretch;
+    /* <-- makes .slider height = sum of small cards */
+}
+
+/* ====== SLIDER (big div left) ====== */
+.slider {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    /* stretch to match small cards */
+    justify-content: center;
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    background: rgba(123, 123, 123, 0.6);
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* ====== PREV/NEXT BUTTONS ====== */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.75);
+    color: #319ab7;
+    border: none;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20%;
+    z-index: 20;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    transition: background 0.18s, transform 0.12s;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-50%) scale(1.05);
+}
+
+.prev {
+    left: 14px;
+}
+
+.next {
+    right: 14px;
+}
+
+/* ====== DOTS WITH ANIMATION ====== */
+.dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgb(178, 180, 181);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.dots span.active {
+    width: 30px;
+    /* expands like a bar */
+    border-radius: 6px;
+    background: #26a6d0;
+}
+
+/* ====== SMALL CARDS (right column) ====== */
+.small-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.small-card {
+    flex: 1;
+    /* all small cards equal height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(8, 30, 40, 0.06);
+    text-align: center;
+}
+
+.small-card img {
+    width: 76%;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.small-card h3 {
+    margin: 6px 0 4px;
+    font-size: 1.05rem;
+}
+
+.small-card p {
+    color: #5a6b7a;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ====== RESPONSIVE (mobile) ====== */
+@media (max-width: 900px) {
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .slider {
+        width: 100%;
+        min-height: 260px;
+        /* optional for mobile */
+    }
+
+    .small-cards {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .small-card {
+        flex: 1;
+        /* equal width for small cards */
+        padding: 12px;
+    }
+
+    .prev,
+    .next {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+        line-height: 38px;
+    }
+
+    .dots span {
+        width: 10px;
+        height: 10px;
+    }
+}
